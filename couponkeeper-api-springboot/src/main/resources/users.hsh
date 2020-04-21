@@ -1,0 +1,15 @@
+create_namespace 'ck'
+
+create 'ck:user', {NAME => 'b', VERSION => '3', TTL => '2147483647', 'BLOOMFILTER' => 'ROW'}, {NAME => 'o', VERSION => '3', TTL => '2147483647', 'BLOOMFILTER' => 'ROW'}
+
+create 'ck:coupon', {NAME => 'i', VERSION => '3', TTL => '2147483647', 'BLOOMFILTER' => 'ROW'}
+
+create 'ck:coupontemplate', {NAME => 'b', VERSION => '3', TTL => '2147483647', 'BLOOMFILTER' => 'ROW'}, {NAME => 'c', VERSION => '3', TTL => '2147483647', 'BLOOMFILTER' => 'ROW'}
+
+create 'ck:feedback', {NAME => 'i', VERSION => '3', TTL => '2147483647', 'BLOOMFILTER' => 'ROW'}
+
+
+//version: 其实默认就是3，所以在这里可以省略。
+//version feedback: 如果用户提交了评论之后就不可以再修改的话，为了节约空间，version可以设置为1
+
+//TTL :列族的生成时间， 2147483647代表永不过期
